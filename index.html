@@ -7,7 +7,7 @@ function submitform() {
   //             + 
   //             "?text=" + document.getElementById("message").value;
   // return true;
-  document.getElementById("targetprice").value = document.getElementById("eps").value * document.getElementById("pe").value *  document.getElementById("growth_percent").value ^ 3 
+  document.getElementById("targetprice").innerHTML = document.getElementById("eps").value * document.getElementById("pe").value * MATH.pow(document.getElementById("growth_percent").value , 3) 
   //url = "http://wa.me/"+document.getElementById("phone").value 
   //            + 
   //           "?text=" + document.getElementById("message").value;
@@ -32,7 +32,7 @@ function submitform() {
 <input name="pe" type="number" placeholder = "2"  id="pe" style= "font-size: 20px; height: 50px; width: 500px; max-width: 100%;  padding:5px; border-color: darkblue;" />
 <br>
 <br>  
-<input name="Calculate" type="submit" class="submit" id="Send" value="Send" onclick="submitform()"
+<input name="Calculate" type="submit" class="submit" id="Send" value="Calculate" onclick="submitform()"
 style= "width: 100px; background-color: blue; color: cornsilk; font-size: 24px; padding: 10px;"
 />
 </form>
