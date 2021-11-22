@@ -8,12 +8,12 @@ function submitform() {
   //             "?text=" + document.getElementById("message").value;
   // return true;
   
-  var target3years = document.getElementById("eps").value * document.getElementById("pe").value * Math.pow(1 + document.getElementById("growth_percent").value/100 , 3).toFixed(2);
-  var target5years = document.getElementById("eps").value * document.getElementById("pe").value * Math.pow(1 + document.getElementById("growth_percent").value/100 , 5).toFixed(2);
+  var target3years = document.getElementById("eps").value * document.getElementById("pe").value * Math.pow(1 + document.getElementById("growth_percent").value/100 , 3);
+  var target5years = document.getElementById("eps").value * document.getElementById("pe").value * Math.pow(1 + document.getElementById("growth_percent").value/100 , 5);
   
   
-  document.getElementById("targetprice3years").innerHTML = target3years 
-  document.getElementById("targetprice5years").innerHTML =  target5years
+  document.getElementById("targetprice3years").innerHTML = target3years.toFixed(2); 
+  document.getElementById("targetprice5years").innerHTML =  target5years.toFixed(2);
 
   //url = "http://wa.me/"+document.getElementById("phone").value 
   //            + 
