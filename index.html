@@ -7,7 +7,7 @@ function submitform() {
   //             + 
   //             "?text=" + document.getElementById("message").value;
   // return true;
-  document.getElementById("targetprice").innerHTML = document.getElementById("eps").value * document.getElementById("pe").value * MATH.pow(document.getElementById("growth_percent").value , 3) 
+  document.getElementById("targetprice").innerHTML = document.getElementById("eps").value * document.getElementById("pe").value * Math.pow(document.getElementById("growth_percent").value , 3) 
   //url = "http://wa.me/"+document.getElementById("phone").value 
   //            + 
   //           "?text=" + document.getElementById("message").value;
@@ -22,18 +22,20 @@ function submitform() {
 <body>
 <h1> Calculate target price for a stock </h1>
 <form id="form5" name="form5" method="get"  enctype="multipart/form-data" onsubmit="submitform()" > 
-
+  <p> EPS </p>
 <input name="eps" type="number" placeholder = "EPS"  id="eps" style= "font-size: 20px; height: 50px; width: 500px; max-width: 100%;  padding:5px; border-color: darkblue;" />
 <br>
 <br>
+  <p> Growth in % </p>
 <input name="growth percent" type="number" placeholder = "Growth Percentage"  id="growth_percent" style= "font-size: 20px; height: 50px; width: 500px; max-width: 100%;  padding:5px; border-color: darkblue;" />
 <br>
 <br>
+  <p> Projected PE </p>
 <input name="pe" type="number" placeholder = "Projected PE"  id="pe" style= "font-size: 20px; height: 50px; width: 500px; max-width: 100%;  padding:5px; border-color: darkblue;" />
 <br>
 <br>  
 <input name="Calculate" type="submit" class="submit" id="Send" value="Calculate" onclick="submitform()"
-style= "width: 100px; background-color: blue; color: cornsilk; font-size: 24px; padding: 10px;"
+style= "width: 200px; background-color: blue; color: cornsilk; font-size: 24px; padding: 10px;"
 />
 </form>
 <br>
