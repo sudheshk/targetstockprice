@@ -27,15 +27,15 @@ function submitform() {
 <body>
 <h1> Calculate target price for a stock </h1>
   <p> EPS </p>
-<input name="eps" type="number" placeholder = "EPS"  id="eps" style= "font-size: 20px; height: 50px; width: 500px; max-width: 100%;  padding:5px; border-color: darkblue;" />
+<input name="eps" type="number" placeholder = "EPS" onchange="submitform()"  id="eps" style= "font-size: 20px; height: 50px; width: 500px; max-width: 100%;  padding:5px; border-color: darkblue;" />
 <br>
 <br>
   <p> Growth in % </p>
-<input name="growth percent" type="number" placeholder = "Growth Percentage"  id="growth_percent" style= "font-size: 20px; height: 50px; width: 500px; max-width: 100%;  padding:5px; border-color: darkblue;" />
+<input name="growth percent" type="number" placeholder = "Growth Percentage" onchange="submitform()"  id="growth_percent" style= "font-size: 20px; height: 50px; width: 500px; max-width: 100%;  padding:5px; border-color: darkblue;" />
 <br>
 <br>
   <p> Projected PE </p>
-<input name="pe" type="number" placeholder = "Projected PE"  id="pe" style= "font-size: 20px; height: 50px; width: 500px; max-width: 100%;  padding:5px; border-color: darkblue;" />
+<input name="pe" type="number" placeholder = "Projected PE" onchange="submitform()"  id="pe" style= "font-size: 20px; height: 50px; width: 500px; max-width: 100%;  padding:5px; border-color: darkblue;" />
 <br>
 <br>  
 <input name="Calculate" type="submit" class="submit" id="Send" value="Calculate" onclick="submitform()"
