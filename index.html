@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Calculate target price for a stock</title>
+<script type="text/javascript">
+function submitform() {
+  // document.getElementById("form5").action = "http://wa.me/"+document.getElementById("phone").value 
+  //             + 
+  //             "?text=" + document.getElementById("message").value;
+  // return true;
+  document.getElementById("targetprice").value = document.getElementById("eps").value * document.getElementById("pe").value *  document.getElementById("growth_percent").value ^ 3 
+  //url = "http://wa.me/"+document.getElementById("phone").value 
+  //            + 
+  //           "?text=" + document.getElementById("message").value;
+  //window.open(
+  //            url, "_blank");
+}
+</script>
+</head>
+<body>
+<h1> Calculate target price for a stock </h1>
+<form id="form5" name="form5" method="get"  enctype="multipart/form-data" onsubmit="submitform()" > 
+
+<input name="eps" type="number" placeholder = "2"  id="eps" style= "font-size: 20px; height: 50px; width: 500px; max-width: 100%;  padding:5px; border-color: darkblue;" />
+<br>
+<br>
+<input name="growth percent" type="number" placeholder = "2"  id="growth_percent" style= "font-size: 20px; height: 50px; width: 500px; max-width: 100%;  padding:5px; border-color: darkblue;" />
+<br>
+<br>
+<input name="pe" type="number" placeholder = "2"  id="pe" style= "font-size: 20px; height: 50px; width: 500px; max-width: 100%;  padding:5px; border-color: darkblue;" />
+<br>
+<br>  
+<input name="Calculate" type="submit" class="submit" id="Send" value="Send" onclick="submitform()"
+style= "width: 100px; background-color: blue; color: cornsilk; font-size: 24px; padding: 10px;"
+/>
+</form>
+<br>
+  <h2> target price: </h2>
+  <h2 id = "targetprice">  </h2>
+</body>
+</html>
