@@ -7,15 +7,15 @@ function submitform() {
   //             + 
   //             "?text=" + document.getElementById("message").value;
   // return true;
-  document.getElementById("targetprice").innerHTML = document.getElementById("eps").value * document.getElementById("pe").value * Math.pow(document.getElementById("growth_percent").value , 3) 
+  document.getElementById("targetprice3years").innerHTML = "3 years : " + document.getElementById("eps").value * document.getElementById("pe").value * Math.pow(1 + document.getElementById("growth_percent").value/100 , 3) 
+  document.getElementById("targetprice5years").innerHTML = "5 years : " + document.getElementById("eps").value * document.getElementById("pe").value * Math.pow(1 + document.getElementById("growth_percent").value/100 , 5) 
+
   //url = "http://wa.me/"+document.getElementById("phone").value 
   //            + 
   //           "?text=" + document.getElementById("message").value;
   //window.open(
   //            url, "_blank");
-  
-  alert("target price is " + document.getElementById("eps").value * document.getElementById("pe").value * Math.pow(1+document.getElementById("growth_percent").value/100 , 3) );
-  
+    
 }
 </script>
 </head>
@@ -38,6 +38,8 @@ style= "width: 200px; background-color: blue; color: cornsilk; font-size: 24px; 
 />
 <br>
   <h2> target price: </h2>
-  <h2 id = "targetprice">  </h2>
-</body>
+  <h2 id = "targetprice3years">  </h2>
+  <h2 id = "targetprice5years">  </h2>
+
+  </body>
 </html>
