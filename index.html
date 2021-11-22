@@ -12,8 +12,8 @@ function submitform() {
   var target5years = document.getElementById("eps").value * document.getElementById("pe").value * Math.pow(1 + document.getElementById("growth_percent").value/100 , 5).toFixed(2);
   
   
-  document.getElementById("targetprice3years").innerHTML = "<br> 3 years : <br> " + target3years 
-  document.getElementById("targetprice5years").innerHTML = "<br> 5 years : <br> " + target5years
+  document.getElementById("targetprice3years").innerHTML = target3years 
+  document.getElementById("targetprice5years").innerHTML =  target5years
 
   //url = "http://wa.me/"+document.getElementById("phone").value 
   //            + 
@@ -42,7 +42,10 @@ function submitform() {
 style= "width: 200px; background-color: blue; color: cornsilk; font-size: 24px; padding: 10px;"
 />
 <br>
+  <p> 3 years target price </p>
   <h2 id = "targetprice3years">  </h2>
+  
+  <p> 5 years target price </p>
   <h2 id = "targetprice5years">  </h2>
 
   </body>
