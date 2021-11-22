@@ -14,14 +14,13 @@ function submitform() {
   //window.open(
   //            url, "_blank");
   
-  alert("target price is " + document.getElementById("eps").value * document.getElementById("pe").value * Math.pow(document.getElementById("growth_percent").value , 3) );
+  alert("target price is " + document.getElementById("eps").value * document.getElementById("pe").value * Math.pow(1+document.getElementById("growth_percent").value/100 , 3) );
   
 }
 </script>
 </head>
 <body>
 <h1> Calculate target price for a stock </h1>
-<form id="form5" name="form5" method="get"  enctype="multipart/form-data" onsubmit="submitform()" > 
   <p> EPS </p>
 <input name="eps" type="number" placeholder = "EPS"  id="eps" style= "font-size: 20px; height: 50px; width: 500px; max-width: 100%;  padding:5px; border-color: darkblue;" />
 <br>
@@ -37,7 +36,6 @@ function submitform() {
 <input name="Calculate" type="submit" class="submit" id="Send" value="Calculate" onclick="submitform()"
 style= "width: 200px; background-color: blue; color: cornsilk; font-size: 24px; padding: 10px;"
 />
-</form>
 <br>
   <h2> target price: </h2>
   <h2 id = "targetprice">  </h2>
