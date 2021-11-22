@@ -7,8 +7,13 @@ function submitform() {
   //             + 
   //             "?text=" + document.getElementById("message").value;
   // return true;
-  document.getElementById("targetprice3years").innerHTML = "3 years : " + document.getElementById("eps").value * document.getElementById("pe").value * Math.pow(1 + document.getElementById("growth_percent").value/100 , 3) 
-  document.getElementById("targetprice5years").innerHTML = "5 years : " + document.getElementById("eps").value * document.getElementById("pe").value * Math.pow(1 + document.getElementById("growth_percent").value/100 , 5) 
+  
+  var target3years = document.getElementById("eps").value * document.getElementById("pe").value * Math.pow(1 + document.getElementById("growth_percent").value/100 , 3).toFixed(2);
+  var target5years = document.getElementById("eps").value * document.getElementById("pe").value * Math.pow(1 + document.getElementById("growth_percent").value/100 , 5).toFixed(2);
+  
+  
+  document.getElementById("targetprice3years").innerHTML = "<br> 3 years : <br> " + target3years 
+  document.getElementById("targetprice5years").innerHTML = "<br> 5 years : <br> " + target5years
 
   //url = "http://wa.me/"+document.getElementById("phone").value 
   //            + 
@@ -37,7 +42,6 @@ function submitform() {
 style= "width: 200px; background-color: blue; color: cornsilk; font-size: 24px; padding: 10px;"
 />
 <br>
-  <h2> target price: </h2>
   <h2 id = "targetprice3years">  </h2>
   <h2 id = "targetprice5years">  </h2>
 
