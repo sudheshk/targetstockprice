@@ -15,6 +15,10 @@ function submitform() {
   document.getElementById("targetprice3years").innerHTML = target3years.toFixed(2); 
   document.getElementById("targetprice5years").innerHTML =  target5years.toFixed(2);
 
+  var appreciation =  Math.pow(target3years / document.getElementById("current_price").value, 1/3) - 1 + " % " +  Math.pow(target5years / document.getElementById("current_price").value, 1/5) - 1 + " % ";
+  document.getElementById("appreciation_percent").innerHTML =  appreciation;
+
+  
   //url = "http://wa.me/"+document.getElementById("phone").value 
   //            + 
   //           "?text=" + document.getElementById("message").value;
@@ -47,6 +51,8 @@ style= "width: 200px; background-color: blue; color: cornsilk; font-size: 24px; 
   
   <p> 5 years target price </p>
   <h2 id = "targetprice5years">  </h2>
+<input name="current price" type="number" placeholder = "Current Price" oninput="submitform()"  id="current_price" style= "font-size: 20px; height: 50px; width: 500px; max-width: 100%;  padding:5px; border-color: darkblue;" />
+  <h2 id = "appreciation_percent">  </h2>
 
   </body>
 </html>
