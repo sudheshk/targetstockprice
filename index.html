@@ -15,8 +15,10 @@ function submitform() {
   document.getElementById("targetprice3years").innerHTML = target3years.toFixed(2); 
   document.getElementById("targetprice5years").innerHTML =  target5years.toFixed(2);
 
-  var appreciation =  Math.pow(target3years / document.getElementById("current_price").value, 1/3) - 1 + " % " +  Math.pow(target5years / document.getElementById("current_price").value, 1/5) - 1 + " % ";
-  document.getElementById("appreciation_percent").innerHTML =  appreciation;
+  var appreciation_3_years =  (Math.pow(target3years / document.getElementById("current_price").value, 1/3) - 1) * 100 ;
+  var appreciation_5_years =  (Math.pow(target5years / document.getElementById("current_price").value, 1/5) - 1) * 100  ;
+
+  document.getElementById("appreciation_percent").innerHTML =  appreciation_3_years.toFixed(2) + "% and " + appreciation_5_years.toFixed(2) + "%";
 
   
   //url = "http://wa.me/"+document.getElementById("phone").value 
